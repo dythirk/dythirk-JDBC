@@ -40,7 +40,7 @@ public class Lab {
 
         Statement stmt = conn.createStatement();
         String sql = "INSERT INTO songs VALUES (4, 'Hey Jude', 'Beatles')";
-        ResultSet rs = ps.executeQuery(sql);
+        ResultSet rs = stmt.executeQuery(sql);
     }
 
     public List<Song> getAllSongs(){
