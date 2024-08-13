@@ -37,13 +37,18 @@ import util.ConnectionUtil;
 public class Lab {
 
     public void createSong(Song song)  {
-        //write jdbc code here
+
+        Statement stmt = conn.createStatement();
+        String sql = "INSERT INTO songs VALUES (4, 'Hey Jude', 'Beatles')";
+        ResultSet song = ps.executeQuery(sql);
     }
 
     public List<Song> getAllSongs(){
         List<Song> songs = new ArrayList<>();
 
-        //write jdbc code here
+        Statement stmt = conn.createStatement();
+        String sql = "SELECT title FROM songs";
+        ResultSet songs = stmt.executeQuery(sql);
 
         return songs;
     }
